@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "Montserrat";
+    src: 
+    local("Montserrat"),
+    url("/fonts/Montserrat/static/Montserrat-Light.ttf") format("ttf"),
+    url("/fonts/Montserrat/static/Montserrat-Light.woff") format("woff");
+    font-weight: 300;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #d6e0e0;
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    min-height: 360px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h1 {
+    color: #83868a;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EDEEF0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+}
+input.warning::placeholder {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #04AA6D;
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    color: #6d6464;
+    padding: 12px 37px 12px 50px;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: 1px solid #d6d1d1;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+
+}
+
+ul li.checked::before {
+    background-image: url("images/circle-check-solid.svg");
+}
+
+ul li span {
+    position: absolute;
+    font-size: 26px;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-style: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    transition: 0.5s all;
+}
+
+ul li span:hover {
+    background-color: #EDEEF0;
+    border-radius: 40%;
+
+}
